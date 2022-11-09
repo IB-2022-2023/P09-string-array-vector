@@ -82,3 +82,10 @@ Input           Output
 1 2 3           -0.471405
 3 2 10.0         0.8
 ```
+
+* Reducción: Función que devuelva la suma de todos los elementos de un vector
+* Min / Max. Función que calcule el valor mínimo, máximo y la media de todos los elementos de un vector
+* String: Función que encripte una cadena de texto pasada por parámetro
+* String: Función que dada una frase devuelva otra frase con todas las "palabras" invertidas
+* Función que concatene dos vectores y devuelva la concatenación
+
