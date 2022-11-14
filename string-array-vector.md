@@ -39,7 +39,6 @@ para su evaluación
 * Ha realizado todos sus ejercicios en la máquina virtual Ubuntu de la asignatura.
 * Demuestra que es capaz de ejecutar comandos Linux en su VM
 
-
 ### Desarrollo dirigido por tests
 Tal como recoge la
 [Wikipedia](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas),
@@ -64,7 +63,6 @@ El propósito del desarrollo guiado por pruebas es lograr un código limpio que 
 La idea es que los requisitos sean traducidos a pruebas (tests), y de este modo, cuando las pruebas pasen 
 se garantizará que el software cumple con los requisitos que se han establecido.
 
-
 Las "unidades" de código para las que se realizan tests habitualmente son clases, funciones o grupos ellas. 
 Supongamos por ejemplo que se está implementando una función (unidad de código) que calcula la suma de dos números enteros.
 Una prueba (test unitario) es un código que valida la corrección de esa función: se podría comprobar que lo
@@ -85,7 +83,6 @@ aunque hay
 Es fácil encontrar en la web mucha documentación sobre TDD. 
 A modo de ejemplo e introducción se recomienda el estudio de
 [Mejorar la calidad del código mediante la prueba unitaria](https://www.mql5.com/es/articles/1579).
-
 
 ### Exercism
 [Exercism](https://exercism.io/) 
@@ -287,10 +284,12 @@ Para la evaluación de esta práctica se le pedirá que, aparte del problema "He
 relacionados en este documento, presente la solución
 de un problema adicional de Exercism de los etiquetados como "fáciles" (*Easy*).
 
-1. Escriba un programa `function-example.cc` que incluya una función C++ que realice el cálculo de 
-la siguiente función matemática de tres variables:
+* Reducción: Función que devuelva la suma de todos los elementos de un vector
+* Min / Max. Función que calcule el valor mínimo, máximo y la media de todos los elementos de un vector
+* String: Función que encripte una cadena de texto pasada por parámetro
+* String: Función que dada una frase devuelva otra frase con todas las "palabras" invertidas
+* Función que concatene dos vectores y devuelva la concatenación
 
-![Función](functionG.png)
 
 ```
 Public test cases
@@ -300,10 +299,3 @@ Input           Output
 1 2 3           -0.471405
 3 2 10.0         0.8
 ```
-
-* Reducción: Función que devuelva la suma de todos los elementos de un vector
-* Min / Max. Función que calcule el valor mínimo, máximo y la media de todos los elementos de un vector
-* String: Función que encripte una cadena de texto pasada por parámetro
-* String: Función que dada una frase devuelva otra frase con todas las "palabras" invertidas
-* Función que concatene dos vectores y devuelva la concatenación
-
