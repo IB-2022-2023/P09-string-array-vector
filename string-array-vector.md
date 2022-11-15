@@ -1,4 +1,4 @@
-# Práctica 09. std::string std::array std::vector
+# Práctica 09. std::string std::array std::vector. Desarrollo dirigido por Tests. Exercism.
 
 # Factor de ponderación: 8
 
@@ -259,11 +259,11 @@ Centre su atención en aquellos aspectos que ya conozca, para consolidarlos.
 Estudie del
 [tutorial de referencia](https://www.learncpp.com/)
 en la asignatura los siguientes apartados:
-* [Local variables](https://www.learncpp.com/cpp-tutorial/local-variables/)
-* [Introduction to global variables](https://www.learncpp.com/cpp-tutorial/introduction-to-global-variables/)
-* [Variable shadowing (name hiding)](https://www.learncpp.com/cpp-tutorial/variable-shadowing-name-hiding/)
-* [Scope, duration, and linkage summary](https://www.learncpp.com/cpp-tutorial/scope-duration-and-linkage-summary/)
-* [Command line arguments](https://www.learncpp.com/cpp-tutorial/command-line-arguments/)
+
+* [7.18 — Introduction to random number generation](https://www.learncpp.com/cpp-tutorial/introduction-to-random-number-generation/)
+* Estudie en 
+[cppreference](https://en.cppreference.com/w/cpp/numeric/random/uniform_real_distribution)
+cómo utilizar una distribución uniforme con número reales (en punto flotante).
 
 ### Ejercicios
 * Al realizar los ejercicios cree dentro de su repositorio de esta práctica un directorio diferente
@@ -284,18 +284,68 @@ Para la evaluación de esta práctica se le pedirá que, aparte del problema "He
 relacionados en este documento, presente la solución
 de un problema adicional de Exercism de los etiquetados como "fáciles" (*Easy*).
 
-* Reducción: Función que devuelva la suma de todos los elementos de un vector
-* Min / Max. Función que calcule el valor mínimo, máximo y la media de todos los elementos de un vector
-* String: Función que encripte una cadena de texto pasada por parámetro
-* String: Función que dada una frase devuelva otra frase con todas las "palabras" invertidas
-* Función que concatene dos vectores y devuelva la concatenación
+2. Desarrolle un programa que incluya una función cuyo prototipo sea:
+``` .cpp
+std::vector<double> GenerateVector(const int size, const double lower, const double upper);
+```
+que genere (devuelva) un vector con `size` componentes.
+Esas componentes (elementos del vector se inicializarán con valores generados aleatoriamente en el intervalo
+`(lower, upper)`.
+Los límiter inferior y superior de ese intervalo se pasan como parámetros a la función *GenerateVector()*.
+Una vez tenga desarrollada esa función, podría invocarla del siguiente modo (por ejemplo):
+``` .cpp
+std::vector<double> my_vector = GenerateVector(30, 5.0, 10.0);
+for (const auto& value: my_vector) {
+  std::cout << "component: " << value << std::endl;
+}
+```
+La llamada anterior inicializaría el vector `my_vector` con 10 componentes de tipo *double* cuyos valores se
+generaron aleatoriamente en el rango `(5.0, 10.0)`.
+A continuación el bucle imprime los valores que se almacenan en ese vector.
+
+3. Desarrolle un programa que incluya una función cuyo nombre sea *ReduceSum* que tome como parámetro un
+vector de números en punto flotante y devuelva como resultado la suma de todos los valores almacenados en el
+vector.
+
+Utilice la función *GenerateVector()* para generar vectores y probar el funcionamiento de *ReduceSum*.
+
+```
+Public test cases
+Input           Output
+1.0 1.0 1.0      3.0
+1 2 3 4 5 6     21.0
+0 0 0 0 1 0 1    2.0
+```
+
+4. Desarrolle un programa que incluya una función que tome como parámetro un vector y calcule los valores
+máximo, mínimo y promedio de todos los valores almacenados en el vector.
+
+Puesto que una función solo puede devolver un único valor, tendrá que investigar algún mecanismo para
+posibilitar que la función devuelva esos tres valores (máximo, mínimo y promedio).
+Una posible solución sería desarrollar 3 funciones diferentes, una para cada uno de los cálculos, pero esa
+solución sería ineficiente porque cada una de esas funciones recorrería el vector una vez (tres en total) pero
+el problema se puede resolver recorriendo el vector una única vez.
+
+Se puede resolver el problema utilizando el paso de parámetros por referencia para posibilitar que la función
+"*comunique*" a su llamador los tres valores que calcula.
+
+Utilice la función *GenerateVector()* para generar vectores y probar el funcionamiento de su función.
+
+5. Desarrolle un programa que incluya una función que tome como parámetros dos vectores y devuelva como
+resultado un tercer vector que sea la "concatenación" de los dos vectores pasados.
 
 
 ```
 Public test cases
 Input           Output
-3 4 5           -0.349927
-4.0 1.0 7.0      0.210819
-1 2 3           -0.471405
-3 2 10.0         0.8
+5
+1 2 3 4 5
+4
+10 20 30 40
+                1 2 3 4 5 10 20 30 40
 ```
+
+* String: Función que encripte una cadena de texto pasada por parámetro
+* String: Función que dada una frase devuelva otra frase con todas las "palabras" invertidas
+
+
