@@ -100,7 +100,7 @@ Además, la interacción con el resto de la comunidad podrá llevar a debates pa
 
 La plataforma se basa en una una aplicación ejecutable en línea de comandos disponible para diferentes sistemas
 operativos (Linux, Mac, Windows).
-Usando esa aplicación, un usuario puede descargar una serie de ejercicios de programación disponibles en la
+Usando esa aplicación, un usuario puede descargar una serie de ejercicios de programación disponibles
 en Exercism y realizar los correspondientes programas hasta que consiga pasar los diferentes tests que se
 suministran con cada ejercicio.
 
@@ -108,7 +108,7 @@ La plataforma puede ser usada en "modo práctica", en cuyo caso no existe la opc
 que una experta le ayude con sus ejercicios), pero aún así merece la pena practicar los múltiples ejercicios 
 que hallará en la plataforma.
 
-## Primeros pasos en Exercism
+#### Primeros pasos en Exercism
 Comience por 
 [registrarse en Exercism](https://exercism.io/users/sign_up). 
 Si lo desea, puede Ud. hacerlo usando la cuenta de GitHub de la que ya dispone.
