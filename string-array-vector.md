@@ -261,6 +261,10 @@ Estudie del
 en la asignatura los siguientes apartados:
 
 * [7.18 — Introduction to random number generation](https://www.learncpp.com/cpp-tutorial/introduction-to-random-number-generation/)
+* [11.13 — For-each loops](https://www.learncpp.com/cpp-tutorial/for-each-loops/)
+* [11.16 — An introduction to std::array](https://www.learncpp.com/cpp-tutorial/an-introduction-to-stdarray/)
+* [11.17 — An introduction to std::vector](https://www.learncpp.com/cpp-tutorial/an-introduction-to-stdvector/)
+
 * Estudie en 
 [cppreference](https://en.cppreference.com/w/cpp/numeric/random/uniform_real_distribution)
 cómo utilizar una distribución uniforme con número reales (en punto flotante).
