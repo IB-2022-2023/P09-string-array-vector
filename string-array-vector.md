@@ -253,7 +253,106 @@ https://exercism.io/my/solutions/xxxx
 ```
 A partir de este punto puede ya ver las soluciones que otras usuarias hayan dado al mismo problema o bien
 avanzar con otros problemas de ese mismo "track".
+Obviamente, comience por trabajar con los problemas etiquetados como fáciles (*Easy*).
 
+#### El problema de los años bisiestos
+Resolveremos a continuación el problema 
+[Leap](https://exercism.org/tracks/cpp/exercises/leap)
+de Exercism.
+
+Previamente, si aún no lo ha hecho, resuelva el problema
+[P61634 Leap Years](https://jutge.org/problems/P61634_en/submissions/S001).
+Hágalo en base a una función booleana *IsLeapYear(const int year)* que devuelva determine si el año que se
+le pasa como parámetro es o no bisiesto.
+Confirme que su programa pase todos los tests públicos antes de subirlo a 
+[Jutge](https://jutge.org/)
+y conseguir un veredicto AC.
+
+A continuación descargue el problema 
+[Leap](https://exercism.org/tracks/cpp/exercises/leap)
+de Exercism:
+```
+exercism download --exercise=leap --track=cpp
+```
+El programa se descarga en el directorio
+```
+~/snap/exercism/5/exercism/cpp/leap
+```
+
+Resultará útil colocar los ejercicios de Exercism en el directorio de trabajo de su práctica de modo que copie
+todos esos ficheros al directorio de trabajo de su práctica:
+```
+cd ~/practicas/practica09-string-array-vector
+mkdir Exercism-Leap
+cd Exercism-Leap
+cp -R ~/snap/exercism/5/exercism/cpp/leap/* .
+```
+
+Si inspecciona el fichero `leap_test.cpp` observará que los tests utilizan una función con nombre
+*is_leap_year()* que toma un parámetro entero correspondiente al año a evaluar.
+Los tests comprueban que la función debe devolver *true* para los años
+1996 y 2000 mientras que debe devolver *false* para los años 2015, 1970, 2100 y 1800.
+
+Así pues habrá que diseñar una función cuyo prototipo ha de ser:
+``` .cpp
+bool is_leap_year(const int year);
+```
+
+Incluya esa línea (el prototipo o declaración) de la función en el fichero `leap.h` cuyo contenido sería:
+``` .cpp
+#if !defined(LEAP_H)
+#define LEAP_H
+
+namespace leap {
+  bool is_leap_year(const int year);
+}  // namespace leap
+
+#endif // LEAP_H
+```
+Obsérvese que el prototipo se está incluyendo en el espacio de nombres *leap*.
+Observe también que Exercism no sigue la regla de la Guía de Estilo de Google para los identificadores de
+funciones.
+
+Incluya a continuación la definición de su función *is_leap_year* en el espacio de nombres *leap* del fichero
+`leap.cpp`.
+Para esta función puede usar el código de la función *IsLeapYear()* que ya desarrolló para Jutge.
+
+Una vez que tenga completo el código y esté correctamente escrito y documentado (recuerde incluir comentarios
+Doxygen con etiquetas JSDoc en todas las funciones que desarrolle, así como ficheros de cabecera en todos sus
+ficheros) proceda ahora a compilar el programa.
+
+Para ello utilice `cmake` con el  fichero `CMakeLists.txt` suministrado por Exercism:
+```
+mkdir build
+cd build
+cmake ..
+make
+```
+Al ejecutar `make` se ejecutará el primer test y el sistema mostrará:
+```
+~/practicas/practica09-string-array-vector/Exercism-Leap/build$ make
+Scanning dependencies of target leap
+[ 25%] Building CXX object CMakeFiles/leap.dir/leap_test.cpp.o
+[ 50%] Building CXX object CMakeFiles/leap.dir/leap.cpp.o
+[ 75%] Building CXX object CMakeFiles/leap.dir/test/tests-main.cpp.o
+[100%] Linking CXX executable leap
+[100%] Built target leap
+Scanning dependencies of target test_leap
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+[100%] Built target test_leap
+```
+indicando que su código ha pasado satisfactoriamente el primero de los tests.
+
+Puesto que la función ya ha sido probada en Jutge podemos tratar de pasar todos los tests disponibles para
+este problema.
+Para ello, edite el fichero `leap_test.cpp` y desplace la línea con la directiva
+`#if defined(EXERCISM_RUN_ALL_TESTS)` para colocarla en la línea inmediatamente anterior a la directiva
+`endif`.
+De este modo se conseguirá que el sistema ejecute todos los tests requeridos por Exercism (6 en este caso)
+para este problema.
+Vuelva de nuevo al directorio `build` y ejecute nuevamente `make`.
 
 ### Material de estudio complementario
 Estudie todo lo que se indica en el epígrafe 
