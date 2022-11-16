@@ -261,8 +261,9 @@ Resolveremos a continuación el problema
 de Exercism.
 
 Previamente, si aún no lo ha hecho, resuelva el problema
-[P61634 Leap Years](https://jutge.org/problems/P61634_en/submissions/S001).
-Hágalo en base a una función booleana *IsLeapYear(const int year)* que devuelva determine si el año que se
+[P61634 Leap Years](https://jutge.org/problems/P61634_en/submissions/S001)
+de Jutge.
+Hágalo en base a una función booleana *IsLeapYear(const int year)* que determine si el año que se
 le pasa como parámetro es o no bisiesto.
 Confirme que su programa pase todos los tests públicos antes de subirlo a 
 [Jutge](https://jutge.org/)
@@ -298,7 +299,7 @@ Así pues habrá que diseñar una función cuyo prototipo ha de ser:
 bool is_leap_year(const int year);
 ```
 
-Incluya esa línea (el prototipo o declaración) de la función en el fichero `leap.h` cuyo contenido sería:
+Incluya el prototipo (declaración) de la función en el fichero `leap.h` cuyo contenido sería:
 ``` .cpp
 #if !defined(LEAP_H)
 #define LEAP_H
@@ -310,7 +311,7 @@ namespace leap {
 #endif // LEAP_H
 ```
 Obsérvese que el prototipo se está incluyendo en el espacio de nombres *leap*.
-Observe también que Exercism no sigue la regla de la Guía de Estilo de Google para los identificadores de
+Observe también que Exercism tampoco sigue la regla de la Guía de Estilo de Google para los identificadores de
 funciones.
 
 Incluya a continuación la definición de su función *is_leap_year* en el espacio de nombres *leap* del fichero
@@ -318,7 +319,7 @@ Incluya a continuación la definición de su función *is_leap_year* en el espac
 Para esta función puede usar el código de la función *IsLeapYear()* que ya desarrolló para Jutge.
 
 Una vez que tenga completo el código y esté correctamente escrito y documentado (recuerde incluir comentarios
-Doxygen con etiquetas JSDoc en todas las funciones que desarrolle, así como ficheros de cabecera en todos sus
+Doxygen con etiquetas JSDoc en todas las funciones que desarrolle, así como comentarios de cabecera en todos sus
 ficheros) proceda ahora a compilar el programa.
 
 Para ello utilice `cmake` con el  fichero `CMakeLists.txt` suministrado por Exercism:
@@ -353,6 +354,14 @@ Para ello, edite el fichero `leap_test.cpp` y desplace la línea con la directiv
 De este modo se conseguirá que el sistema ejecute todos los tests requeridos por Exercism (6 en este caso)
 para este problema.
 Vuelva de nuevo al directorio `build` y ejecute nuevamente `make`.
+
+Una vez que su solución pase todos los tests puede borrar el directorio `build` y enviar su solución a Exercism.
+En el fichero `HELP.md` hallará el comando para ello:
+```
+$ rm -rf build
+$ exercism submit leap.cpp leap.h
+```
+Y a continuación puede Ud. ver su solución usando un navegador.
 
 ### Material de estudio complementario
 Estudie todo lo que se indica en el epígrafe 
