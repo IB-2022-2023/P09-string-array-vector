@@ -126,7 +126,7 @@ máquina local.
 Desde esa página (*Installing the CLI*) se accede al enlace
 [Welcome to the Exercism installation guide!](https://exercism.org/cli-walkthrough)
 donde hallará instrucciones sobre cómo instalar `Exercism` en su máquina.
-En este documento se propone instalarla en la máquina virtual de la asignatura.
+En *Informática Básica* se propone instalarla en su máquina virtual de la asignatura.
 Eligiendo la opción *Linux* y a continuación la opción *Using snap* se le pedirá que ejecute
 ```
 $ sudo snap install exercism
@@ -153,7 +153,7 @@ donde el *token* que figura en el comando anterior se encuentra (es específico 
 de la cuenta de usuario que se ha creado.
 Basta copiar de esa página el token y colocarlo en el comando anterior.
 
-El comando anterior, una vez ejecutado indica:
+El comando, una vez ejecutado indica:
 ```
 You have configured the Exercism command-line client:
 
@@ -168,9 +168,9 @@ En la página de cada problema figura una descripción precisa del mismo y
 en la pestaña *Your iterations* hay un enlace
 [Learn more about solving exercises locally](https://exercism.org/docs/using/solving-exercises/working-locally)
 en el que figuran instrucciones para:
-* Download. Descargar el problema mediante el comando `exercism download --exercise=hello-world --track=cpp`
-* Solve. Para resolver el problema se propone usar el editor favorito del usuario. Se recomienda usar vim.
-* Submit. El comando (`exercism submit`) para subir a la plataforma la solución que el usuario proponga.
+* *Download*. Descargar el problema mediante el comando `exercism download --exercise=hello-world --track=cpp`
+* *Solve*. Para resolver el problema se propone usar el editor favorito del usuario. Se recomienda usar vim.
+* *Submit*. El comando (`exercism submit`) para subir a la plataforma la solución que el usuario proponga.
 
 Si se ejecuta el comando para descargar el problema el sistema responde:
 ```
@@ -185,7 +185,7 @@ Si revisa Ud. los ficheros descargados observará que Exercism utiliza `.cpp` co
 con código fuente C++ en lugar de la extensión `.cc` que se usa en *Informática Básica*.
 La extensión `.cpp` es muy común para ficheros de código C++.
 
-## Ejecución de los tests para un determinado problema
+#### Ejecución de los tests para un determinado problema
 El siguiente paso consiste en editar el programa (en el caso del problema "Hello World" el fichero a editar es
 `hello_world.cpp`).
 Edite ese fichero hasta que considere que tiene una versión operativa.
