@@ -5,7 +5,7 @@
 ### Objetivos
 Los objetivos de esta práctica son que el alumnado:
 * Sea capaz de resolver problemas sencillos en C++ usando todos los conocimientos adquiridos hasta ahora, 
-  y en particular utilizando estructuras de datos básicas, `std::string`, `std::array`, `std::vector`
+  y en particular utilizando objetos de las clases `std::string`, `std::array`, `std::vector`
 * Conozca los fundamentos del desarrollo dirigido por tests y las pruebas unitarias
 * Conozca la plataforma Exercism y sea capaz de interaccionar con la misma para resolver problemas 
 
@@ -259,15 +259,15 @@ Centre su atención en aquellos aspectos que ya conozca, para consolidarlos.
 Estudie del
 [tutorial de referencia](https://www.learncpp.com/)
 en la asignatura los siguientes apartados:
-
 * [7.18 — Introduction to random number generation](https://www.learncpp.com/cpp-tutorial/introduction-to-random-number-generation/)
-* [11.13 — For-each loops](https://www.learncpp.com/cpp-tutorial/for-each-loops/)
+* [4.17 — Introduction to std::string](https://www.learncpp.com/cpp-tutorial/introduction-to-stdstring/)
+* [4.18 — Introduction to std::string_view](https://www.learncpp.com/cpp-tutorial/introduction-to-stdstring_view/)
 * [11.16 — An introduction to std::array](https://www.learncpp.com/cpp-tutorial/an-introduction-to-stdarray/)
 * [11.17 — An introduction to std::vector](https://www.learncpp.com/cpp-tutorial/an-introduction-to-stdvector/)
-
+* [11.13 — For-each loops](https://www.learncpp.com/cpp-tutorial/for-each-loops/)
 * Estudie en 
 [cppreference](https://en.cppreference.com/w/cpp/numeric/random/uniform_real_distribution)
-cómo utilizar una distribución uniforme con número reales (en punto flotante).
+cómo utilizar una distribución uniforme con números reales (en punto flotante).
 
 ### Ejercicios
 * Al realizar los ejercicios cree dentro de su repositorio de esta práctica un directorio diferente
@@ -300,12 +300,12 @@ Una vez tenga desarrollada esa función, podría invocarla del siguiente modo (p
 ``` .cpp
 std::vector<double> my_vector = GenerateVector(30, 5.0, 10.0);
 for (const auto& value: my_vector) {
-  std::cout << "component: " << value << std::endl;
+  std::cout << "Component: " << value << std::endl;
 }
 ```
 La llamada anterior inicializaría el vector `my_vector` con 10 componentes de tipo *double* cuyos valores se
 generaron aleatoriamente en el rango `(5.0, 10.0)`.
-A continuación el bucle imprime los valores que se almacenan en ese vector.
+A continuación el bucle imprime los valores (componentes) que se almacenan en ese vector.
 
 3. Desarrolle un programa que incluya una función cuyo nombre sea *ReduceSum* que tome como parámetro un
 vector de números en punto flotante y devuelva como resultado la suma de todos los valores almacenados en el
@@ -338,7 +338,6 @@ Utilice la función *GenerateVector()* para generar vectores y probar el funcion
 5. Desarrolle un programa que incluya una función que tome como parámetros dos vectores y devuelva como
 resultado un tercer vector que sea la "concatenación" de los dos vectores pasados.
 
-
 ```
 Public test cases
 Input           Output
@@ -351,5 +350,4 @@ Input           Output
 
 * String: Función que encripte una cadena de texto pasada por parámetro
 * String: Función que dada una frase devuelva otra frase con todas las "palabras" invertidas
-
 
