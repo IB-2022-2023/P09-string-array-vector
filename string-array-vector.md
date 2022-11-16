@@ -5,7 +5,8 @@
 ### Objetivos
 Los objetivos de esta práctica son que el alumnado:
 * Sea capaz de resolver problemas sencillos en C++ usando todos los conocimientos adquiridos hasta ahora, 
-  y en particular utilizando objetos de las clases `std::string`, `std::array`, `std::vector`
+  y en particular utilizando funciones y objetos de las clases `std::string`, `std::array`, `std::vector`
+* Diseñe, desarrolle y utilice funciones en sus programas haciendo que sus programas sean modulares
 * Conozca los fundamentos del desarrollo dirigido por tests y las pruebas unitarias
 * Conozca la plataforma Exercism y sea capaz de interaccionar con la misma para resolver problemas 
 
@@ -47,19 +48,19 @@ ingeniería de software que involucra otras dos técnicas:
 escribir las pruebas primero (Test First Development) y 
 [Refactorización](https://es.wikipedia.org/wiki/Refactorizaci%C3%B3n)
 (Refactoring) o reestructuración del código.
-Para escribir las pruebas generalmente se utilizan las pruebas unitarias (unit test en inglés). 
+Para escribir las pruebas generalmente se utilizan las pruebas unitarias (*unit testis* en inglés). 
 
 El TDD se basa en la repetición de un ciclo de desarrollo muy corto que
 involucra la repetición de tres pasos:
 1. En primer lugar el desarrollador escribe un caso de prueba (test) que falla (a propósito) y que define una mejora deseada (habitualmente una nueva función o método)
 2. A continuación se desarrolla el código (de la función) que hace que la prueba pase satisfactoriamente 
-3. Finalmente refactoriza el nuevo código hasta obtener un resultado satisfactorio
+3. Finalmente se refactoriza (se reescribe, mejora) el nuevo código hasta obtener un resultado satisfactorio
 
 Esta imagen representa este ciclo repetitivo característico del TDD.
 
 ![TDD cycle](https://raw.githubusercontent.com/ULL-ESIT-IB-2021-2022/P11-OOP-GoogleTests/main/red-green-refactor.png "Red-Green-Refactor")
 
-El propósito del desarrollo guiado por pruebas es lograr un código limpio que funcione correctamente.
+El propósito del desarrollo guiado por tests es lograr un código limpio que funcione correctamente.
 La idea es que los requisitos sean traducidos a pruebas (tests), y de este modo, cuando las pruebas pasen 
 se garantizará que el software cumple con los requisitos que se han establecido.
 
@@ -75,10 +76,15 @@ Existen diversas plataformas para el desarrollo de tests unitarios en C++.
 Algunas de las de uso más extendido son
 [Boost.Test](https://www.boost.org/doc/libs/1_49_0/libs/test/doc/html/index.html),
 [CppUnit](https://sourceforge.net/projects/cppunit/),
-[Cute](https://cute-test.com/)
+[Cute](https://cute-test.com/) o
 [Catch2](https://github.com/catchorg/Catch2)
 aunque hay
 [muchas otras](https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#C++)
+
+Los tests disponibles en Jutge para cada uno de los problemas no son más que una versión primitiva de las
+pruebas que debe pasar un programa o función para considerarse correcto.
+Utilizando alguna de estas plataformas lo que se consigue es que los tests se
+incorporen al desarrollo del programa como un conjunto de pruebas que cada programa o función ha de verificar.
 
 Es fácil encontrar en la web mucha documentación sobre TDD. 
 A modo de ejemplo e introducción se recomienda el estudio de
