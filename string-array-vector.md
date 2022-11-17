@@ -282,7 +282,7 @@ El programa se descarga en el directorio
 
 Resultará útil colocar los ejercicios de Exercism en el directorio de trabajo de su práctica de modo que copie
 todos esos ficheros a su directorio:
-```
+``` .bash
 cd ~/practicas/practica09-string-array-vector
 mkdir Exercism-Leap
 cd Exercism-Leap
@@ -293,13 +293,15 @@ Haga esto con todos los ejercicios de Exercism que resuelva: colóquelos dentro 
 prácticas.
 
 Si inspecciona el fichero `leap_test.cpp` observará que contiene varios tests (pruebas unitarias) 
-como el siguiente que su programa tiene que cumplir:
+como el siguiente:
 ``` .cpp
  8 TEST_CASE("not_divisible_by_4")
  9 {
 10     REQUIRE(!leap::is_leap_year(2015));
 11 }
 ```
+Su programa ha de cumplir todos estos tests.
+
 La línea 8 indica simplemente un nombre (arbitrario) que se le ha puesto al test.
 La línea 10 indica que se requiere que la función *is_leap_year()* del espacio de nombres *leap*
 devuelva *false*.
