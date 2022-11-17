@@ -307,12 +307,13 @@ La línea 10 indica que se requiere que la función *is_leap_year()* del espacio
 devuelva *false*.
 Obsérvese que la función se invoca usando el espacio de nombres en que está definida:
 ``` .cpp
-leap::is_leap_year(2015));
+leap::is_leap_year(2015);
 ```
 
 la cláusula `REQUIRE` es específica de la plataforma de testing 
 [Catch2](https://github.com/catchorg/Catch2)
-que utiliza Exercism, y su significado es obvio: se **requiere** que la función devuelva *false* cuando se le
+que utiliza Exercism, y su significado es obvio: se **requiere** que su argumento 
+(`!leap::is_leap_year(2015)`) sea cierto, o dicho de otro modo, que la función devuelva *false* cuando se le
 pasa el año 2015 como parámetro.
 
 De esta inspección se deduce que los tests utilizan una función con nombre
@@ -341,7 +342,7 @@ Observe también que Exercism tampoco sigue la regla de la Guía de Estilo de Go
 funciones.
 
 Incluya a continuación la definición de su función *is_leap_year* en el espacio de nombres *leap* del fichero
-`leap.cpp`.
+`leap.cpp`
 Para esta función puede usar el código de la función *IsLeapYear()* que ya desarrolló para Jutge.
 
 Una vez que tenga completo el código y esté correctamente escrito y documentado (recuerde incluir comentarios
@@ -350,10 +351,11 @@ ficheros) proceda ahora a compilar el programa.
 
 Para ello utilice `cmake` con el  fichero `CMakeLists.txt` suministrado por Exercism:
 ```
-mkdir build
-cd build
-cmake ..
-make
+$ cd ~/practicas/practica09-string-array-vector/Exercism-Leap/
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
 ```
 Al ejecutar `make` se ejecutará el primer test y el sistema mostrará:
 ```
@@ -376,7 +378,7 @@ Puesto que la función ya ha sido probada en Jutge podemos tratar de pasar todos
 este problema.
 Para ello, edite el fichero `leap_test.cpp` y desplace la línea con la directiva
 `#if defined(EXERCISM_RUN_ALL_TESTS)` para colocarla en la línea inmediatamente anterior a la directiva
-`endif`.
+`#endif`.
 De este modo se conseguirá que el sistema ejecute todos los tests requeridos por Exercism (6 en este caso)
 para este problema.
 Vuelva de nuevo al directorio `build` y ejecute nuevamente `make`.
@@ -487,7 +489,3 @@ Input           Output
 10 20 30 40
                 1 2 3 4 5 10 20 30 40
 ```
-
-* String: Función que encripte una cadena de texto pasada por parámetro
-* String: Función que dada una frase devuelva otra frase con todas las "palabras" invertidas
-
