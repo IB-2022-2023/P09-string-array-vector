@@ -392,11 +392,14 @@ $ exercism submit leap.cpp leap.h
 Y a continuación puede Ud. ver su solución usando un navegador.
 
 ### Material de estudio complementario
-Estudie todo lo que se indica en el epígrafe 
-[Functions](https://google.github.io/styleguide/cppguide.html#Functions)
-de la Guía de Estilo de Google y ponga en práctica todo lo que en ella se propone.
-Es normal si encuentra en ese epígrafe algún contenido que aún no ha estudiado: no se preocupe. 
-Centre su atención en aquellos aspectos que ya conozca, para consolidarlos.
+Repase de las
+[Transparencias de clase](https://docs.google.com/presentation/d/14cc5fUlnjyqlMVdTJwVzCnw8j0fQZiKzhbEoE5KFc1c/edit?usp=sharing) 
+y sus correspondientes programas de ejemplo, todos los contenidos relacionados con los objetos de tipo 
+`std::string`, `std::array` y `std::vector`
+
+También de las
+[Transparencias de clase](https://docs.google.com/presentation/d/1iSWdZlfWgzYYn3oltNdKtGJynhskDQAK8UxbsHDs9K0/edit?usp=sharing)
+todos los contenidos relacionados con el paso de parámetros a las funciones.
 
 Estudie del
 [tutorial de referencia](https://www.learncpp.com/)
