@@ -281,7 +281,7 @@ El programa se descarga en el directorio
 ```
 
 Resultará útil colocar los ejercicios de Exercism en el directorio de trabajo de su práctica de modo que copie
-todos esos ficheros al directorio de trabajo de su práctica:
+todos esos ficheros a su directorio:
 ```
 cd ~/practicas/practica09-string-array-vector
 mkdir Exercism-Leap
@@ -289,7 +289,31 @@ cd Exercism-Leap
 cp -R ~/snap/exercism/5/exercism/cpp/leap/* .
 ```
 
-Si inspecciona el fichero `leap_test.cpp` observará que los tests utilizan una función con nombre
+Haga esto con todos los ejercicios de Exercism que resuelva: colóquelos dentro de sus directorios de
+prácticas.
+
+Si inspecciona el fichero `leap_test.cpp` observará que contiene varios tests (pruebas unitarias) 
+como el siguiente que su programa tiene que cumplir:
+``` .cpp
+ 8 TEST_CASE("not_divisible_by_4")
+ 9 {
+10     REQUIRE(!leap::is_leap_year(2015));
+11 }
+```
+La línea 8 indica simplemente un nombre (arbitrario) que se le ha puesto al test.
+La línea 10 indica que se requiere que la función *is_leap_year()* del espacio de nombres *leap*
+devuelva *false*.
+Obsérvese que la función se invoca usando el espacio de nombres en que está definida:
+``` .cpp
+leap::is_leap_year(2015));
+```
+
+la cláusula `REQUIRE` es específica de la plataforma de testing 
+[Catch2](https://github.com/catchorg/Catch2)
+que utiliza Exercism, y su significado es obvio: se **requiere** que la función devuelva *false* cuando se le
+pasa el año 2015 como parámetro.
+
+De esta inspección se deduce que los tests utilizan una función con nombre
 *is_leap_year()* que toma un parámetro entero correspondiente al año a evaluar.
 Los tests comprueban que la función debe devolver *true* para los años
 1996 y 2000 mientras que debe devolver *false* para los años 2015, 1970, 2100 y 1800.
